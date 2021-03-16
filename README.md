@@ -18,9 +18,9 @@ reboot
 docker build -f ./docker/Dockerfile --rm -t mmaction2 .
 ```
 
-3. Create a new container.
+3. Create a new container. (Be careful to set gpu number)
 ```
-docker run --name mmaction2WS --gpus all --shm-size=8g -it mmaction2
+docker run --name mmaction2WS --gpus 1 --shm-size=8g -it mmaction2
 ```
 
 4. Download checkpoints and save them in the folder  __/mmaction2/checkpoints/__. Here we use one example [tsn_r50_1x1x3_100e_kinetics400_rgb_20200614-e508be42.pth](https://download.openmmlab.com/mmaction/recognition/tsn/tsn_r50_1x1x3_100e_kinetics400_rgb/tsn_r50_1x1x3_100e_kinetics400_rgb_20200614-e508be42.pth).
