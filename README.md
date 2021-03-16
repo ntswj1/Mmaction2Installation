@@ -12,18 +12,18 @@ sudo apt-get install -y nvidia-docker2
 reboot
 ```
 
-2. Download the [Dockerfile](https://github.com/open-mmlab/mmaction2/blob/master/docker/Dockerfile), and build an image.
+1. Download the [Dockerfile](https://github.com/open-mmlab/mmaction2/blob/master/docker/Dockerfile), and build an image.
 ```
 # build an image with PyTorch 1.6.0, CUDA 10.1, CUDNN 7.
 docker build -f ./docker/Dockerfile --rm -t mmaction2 .
 ```
 
-3. Create a new container. (Be careful to set gpu number)
+1. Create a new container.
 ```
 docker run --name mmaction2WS --gpus 1 --shm-size=8g -it mmaction2
 ```
 
-4. Download checkpoints and save them in the folder  __/mmaction2/checkpoints/__. Here we use one example [tsn_r50_1x1x3_100e_kinetics400_rgb_20200614-e508be42.pth](https://download.openmmlab.com/mmaction/recognition/tsn/tsn_r50_1x1x3_100e_kinetics400_rgb/tsn_r50_1x1x3_100e_kinetics400_rgb_20200614-e508be42.pth).
+1. Download checkpoints and save them in the folder  __/mmaction2/checkpoints/__. Here we use one example [tsn_r50_1x1x3_100e_kinetics400_rgb_20200614-e508be42.pth](https://download.openmmlab.com/mmaction/recognition/tsn/tsn_r50_1x1x3_100e_kinetics400_rgb/tsn_r50_1x1x3_100e_kinetics400_rgb_20200614-e508be42.pth).
 
 #### Verification
 Download <kbd>testMmaction2.py</kbd> and save it in the folder __/mmaction2/__.
@@ -41,6 +41,8 @@ shaking hands:  9.908401
 clapping:  9.189913
 massaging feet:  8.305307
 ```
+
+Note: Install [denseflow](https://github.com/ntswj1/Mmaction2Installation/blob/main/denseflow/Install.md) to extract both frames and optical flow for data preparation.
 
 #### Reference
  For more information of installation, please check this website: [Mmaction2 installation](https://github.com/open-mmlab/mmaction2/blob/master/docs/install.md)
