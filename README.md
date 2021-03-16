@@ -42,7 +42,8 @@ clapping:  9.189913
 massaging feet:  8.305307
 ```
 
-Note: Install [denseflow](https://github.com/ntswj1/Mmaction2Installation/blob/main/denseflow/Install.md) to extract both frames and optical flow for data preparation.
+#### Denseflow (Optional)
+Install [denseflow](https://github.com/ntswj1/Mmaction2Installation/blob/main/denseflow/Install.md) to extract both frames and optical flow for data preparation.
 
 #### Reference
  For more information of installation, please check this website: [Mmaction2 installation](https://github.com/open-mmlab/mmaction2/blob/master/docs/install.md)
